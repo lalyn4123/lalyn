@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Half Watermelon Canvas</title>
+</head>
+<body>
+    <canvas id="halfWatermelonCanvas" width="400" height="400"></canvas>
+    <script>
+        // Get the canvas element and its 2d context
+        var canvas = document.getElementById('halfWatermelonCanvas');
+        var ctx = canvas.getContext('2d');
+
+        // Draw the green part of the watermelon (rind)
+        ctx.beginPath();
+        ctx.fillStyle = 'rgba(154,205,50,255)';
+        ctx.arc(200, 200, 150, 0, Math.PI);
+    
+        ctx.lineTo(60, 200);
+        ctx.closePath();
+        ctx.fill();
+        
+        
+
+        // Draw the red part of the watermelon (inside)
+        ctx.beginPath();
+        ctx.fillStyle = 'rgba(254,0,0,255)';
+        ctx.arc(201, 210, 130, 0, Math.PI);
+        ctx.lineTo(90, 210);
+        ctx.closePath();
+        ctx.fill();
+
+    </script>
+</body>
+</html>
